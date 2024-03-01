@@ -1,10 +1,13 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- /*used to design two dimensional  using grid */ -->
+
     <style>
       .box1 {
         background-color: red;
@@ -44,6 +47,11 @@
       /* container */
       .container {
         display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+          'h h h'
+          '2 3 4'
+          '5 5 5';
 
         /* grid-template-columns used to specify the columns in our layout */
 
@@ -88,27 +96,28 @@
 
         /* grid-template-rows: 1fr 2fr 1fr; */
         /* like the grid-template-columns: repeat(); */
-        grid-template-columns: repeat(3, 1fr);
-        justify-items: center;
+        /* grid-template-columns: repeat(3, 1fr); */
+        /* justify-items: center;
         justify-items: start;
-        justify-items: end;
+        justify-items: end; */
         /*  for aligning item in the div */
       }
       .box1 {
+        grid-area: h;
+      }
+      /* .box1 {
         /* grid-column-start: 1;
 
 
         start point 1
         end point 3
         grid-column-end: 3; */
-        /* grid-column: 1/3;
+      /* grid-column: 1/3;
         1 defines start point and 3 defines end point
         grid-row: 1/3; */
-        justify-self: center;
-        /* for aligning particular div */
-      }
-
-      /*used to design two dimensional  using grid */
+      /* justify-self: center; */
+      /* for aligning particular div */
+      /* } */
     </style>
   </head>
   <body style="background-color: lightgray">
